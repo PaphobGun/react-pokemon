@@ -11,7 +11,7 @@ function getPokemonId(url: string) {
   }
 
   // Example
-  // https://pokeapi.co/api/v2/pokemon/1/
+  // https://pokeapi.co/api/v2/pokemon/10/
   const splitted = url.split('/');
 
   if (splitted.length < 2) {
