@@ -1,6 +1,6 @@
 # React Pokemon
 
-Follow these step to run the application
+Follow these steps to run the application
 
 - npm i
 - npm run dev
