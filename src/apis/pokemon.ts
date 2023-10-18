@@ -10,7 +10,9 @@ type PokemonListResponse = {
   results: Pokemon[];
 };
 
+// Fixed the limit to 12 as mentioned in the FIGMA
+const MAX_SIZE = 12;
+
 export async function getPokemonList(page: number) {
-  // Fixed the limit to 12 as mentioned in the FIGMA
-  return await fetchAPI<PokemonListResponse>(`${BASE_URL}/pokemon?limit=12&offset=${page - 1}`);
+  return await fetchAPI<PokemonListResponse>(`${BASE_URL}/pokemon?limit=${MAX_SIZE}&offset=${(page - 1) * MAX_SIZE}`);
 }
